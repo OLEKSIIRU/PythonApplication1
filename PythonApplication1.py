@@ -9,4 +9,5 @@ print("Tere tulemst kooli", kool.lower"!\nOle hea",kursus,".kuursuse õpilaseks!
 print("Tere tulemast kooli {0}!\nOle hea {1}.kuursuse õpetajaks!". format(kool,kursus))#kool on Kool
 print(type(kool))
 print(type(kursus))
-print("победа!") 
+arv1=float(input("Arv 1: "))
+arv2=float(input("Arv 2:"))
