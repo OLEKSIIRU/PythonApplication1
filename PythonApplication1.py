@@ -1,4 +1,6 @@
-﻿#1
+﻿from math import * #matematelised funktsionid
+from random import *
+#1
 print("Tere mailm")
 nimi=input("Mis on sinu nimi on?")
 print("Tere mailm! Tervitan sind{0}!".format(nimi))
@@ -19,19 +21,43 @@ candy-=mitu
 print("Nüüd laua peal on {0}".format(candy))
 
 #4
-D=float(input("dlinna okruzhnosti "))
-print("diametr on {0}".fromat(D/3.14))
+D=float(input("dlinna okruzhnosti :")) #D=2*pi*R=pi*d
+d=round(D/pi,2)
+print("diametr on {0}",d)
 
 #5
+N=float(input("N storona: "))
+M=float(input("M storona: "))
+NM=sqrt(N**2+M**2)
+print("diagonal on {0}", NM)
 
+#6
 
+try:
+    aeg = float(input("Mitu tundi kulus sõiduks? "))
+    teepikkus = float(input("Mitu kilomeetrit sõitsid? "))
+    kiirus=round(aeg/teepikkus)
+    print("Sinu kiirus oli " + str(kiirus) + " km/h")
+except :
+    print("Andumetüübi viga")
 
+#7
+a=float(input("a"))
+b=float(input("b"))
+c=float(input("c"))
+d=float(input("d"))
+e=float(input("e"))
+Average=(a+b+c+d+e)/5
+print("Average", Average)
 
+a1=randint(1,110)
+a2=randint(1,110)
+a3=randint(1,110)
+a4=randint(1,110)
+a5=randint(1,110)
+print("Arvude {0},{1],{2},{3}ja {4} aritmeetiline keskmine on {5}".format(a1,a2,a3,a4,a5, (a1+a2+a3+a4+a5)/5))
 
-
-
-
-
+#8
 
 
 
