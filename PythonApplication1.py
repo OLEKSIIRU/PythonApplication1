@@ -17,3 +17,7 @@ print(" {0 / {1}={2}".format(arv1,arv2,arv1/arv2)) #jagamine
 print(" {0 ** {1}={2}".format(arv1,arv2,arv1**arv2)) #astendamine
 print(" {0 ja {1} jääk={2}".format(arv1,arv2,arv1%arv2)) #jagamisjääk
 print(" {0 ja {1} jagamise täis osa {2}".format(arv1,arv2,arv1//arv2)) #jagamise täis osa
+
+tehe=input("Mida teha: ")
+v=eval(str(arv1)+tehe+str(arv2))
+print(v)
