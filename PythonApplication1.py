@@ -58,9 +58,22 @@ a5=randint(1,110)
 print("Arvude {0},{1],{2},{3}ja {4} aritmeetiline keskmine on {5}".format(a1,a2,a3,a4,a5, (a1+a2+a3+a4+a5)/5))
 
 #8
+print("   @..@")
+print("----")
+print("( \__/ )" )
+print('^^ "" ^^')
 
+#9
+a=randint(1,110)
+b=randint(1,110)
+c=randint(1,110)
+P=(a+b+c)
+print("Perimetr",P)
 
-
+#10
+P=randint(1,10)
+Kokku=(12,90+1,29)/P
+print("S kazhdogo po", Kokku)
 
 
 
