@@ -100,3 +100,100 @@ print(" {0 ja {1} jagamise täis osa {2}".format(arv1,arv2,arv1//arv2)) #jagamis
 tehe=input("Mida teha: ")
 v=eval(str(arv1)+tehe+str(arv2))
 print(v)
+#1 Sõna/Lause
+
+#Sisestage sõna või laise klaviatuurilt ja loendage, mitu vokaali ja mitu konsonanti selles on.
+
+#Kui on sisestatud lause, loendage ka kirjavahemärgid ja tühikud.
+
+#2 Loetelu
+
+#Küsi kasutajalt viis nime. Salvesta need loendisse ja kuva tähestikulises järjekorras. Kuva eraldi viimati lisatud nimi.
+
+#Lisa võimalist loendis olevaid nimesid muuta.
+
+#Tekita loend, kuhu oled lisanud meelega mõned ühesugused nimed. opilased = [‘Juhan’,’Kati’,’Mario’,’Mario’,’Mati’,’Mati’]
+
+#Loo kood, mis ei väljasta kordusi.
+
+#Loo vanuste loend. Leia numbrite suurim ja väikseim arv, kogusumma, keskmine.
+
+#3 Tärnid
+
+#    Kasuta loendis olevate arvude väärtusi ning loo tärnide abil lintdiagramm. Näiteks:
+
+#******************
+#*******************
+#********************************
+#*****************************************
+#****************************************************
+#************
+
+#4 Postiindex
+
+#В Эстонии почтовые индексы состоят из 5 чисел, где первое число обозначает уезд:
+
+#    1 – Tallinn
+#    2 – Narva, Narva-Jõesuu
+#    3 – Kohtla-Järve
+#    4 – Ida-Virumaa, Lääne-Virumaa, Jõgevamaa
+#    5 – Tartu linn
+#    6 – Tartumaa, Põlvamaa, Võrumaa, Valgamaa
+#    7 – Viljandimaa, Järvamaa, Harjumaa, Raplamaa
+#    8 – Pärnumaa
+#    9 – Läänemaa, Hiiumaa, Saaremaa
+
+#Напишите программу, которая проверяет введенный индекс(количество символов, соответствие типу данных и т. д.) и отображает уезд, к которому он относится.
+
+#Для проверки какому уезду принадлежит индекс, надо проверить первую цифру введенного значения. Для этого введеный индекс надо преобразовать в список при помощи indeks_list=list(indeks) и взять только первый элемент для проверки indeks_list[0].
+
+#И если почтовый индеск Нарвы, Таллинна и Кохтла-Ярве, то сообщить пользователю "Оставайтесь дома!", в остальных случаях "Носите маски!".
+#from cmath import e
+
+
+text=input("Sisesta tekst:") #text->("t","e","x","t") 123->(1,2,3)
+text_list=list(text)
+k=len(text_list)
+if text.isdigit():
+ for t in range(k):
+     num=int(text_list[t])
+     text_list.pop(t)
+     text_list.insert(t,num)
+
+     summa=0
+     for e in text_list:
+         summa+=e
+     print("Summma:",summa)
+print(text_list)
+e=input("Elelemnt: ") #str
+    try:
+        if e.isalpha():
+            indeks=text_list.index(e)
+        else:
+            indeks=text_list.index(int(e))
+        print("Element: {0} on {1}sitsioonil".format(e,indeks+1))
+    except:
+         print("Element puudub")
+#1
+vokaali=["a","e","y","u","i","i","o","ü","õ","ö","ä"]
+r=["qwrtpsdfghklzxcvbnm"]
+markid=str.punctuation
+v=k=m=t=0
+while True:
+    tekst=input("Sisesta sõna või lause:").lower()
+    if tekst.isdigit():
+     break
+    else:
+        tekst_l=list(tekst)
+        print(tekst_l)
+        for e in tekst_l:
+         if e.lower() in vokaali:
+          v+=1
+         elif e.lower() in r:
+             k+=1
+         elif e.lower() in markid:
+                m+=1
+         elif e.lower() in " ":
+                t+=1 
+print("Vokaali:",v)
+print("Konsonanti:",k)
