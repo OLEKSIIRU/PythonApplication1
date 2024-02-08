@@ -197,3 +197,114 @@ while True:
                 t+=1 
 print("Vokaali:",v)
 print("Konsonanti:",k)
+
+
+from tkinter import *
+import tkinter as tk
+
+
+def FromEntryToLabel(event):
+    t=ent.get()
+    v.configure(text=t)
+
+
+aken=tk.Tk()
+aken.geometry("600x500")
+aken.title("Решение квадратного уравнения")
+aken.iconbitmap("bmp.ico")
+
+f=Frame(aken,bg="#FF0000",border=10,height=1200,width=1600)
+
+l=Label(f,text="Решение квадратного уравнения",bg="#0000CD",fg="#FFFFFF",font="Algerian 14",height=3,width=50)
+v=Label(f,text="Решение ",bg="#0000CD",fg="#FFFFFF",font="Algerian 24",height=3,width=17)
+
+a=tk.Label(aken,text="x**2+",bg="#0000CD",fg="#FFFFFF",font="Algerian 24",height=3,width=4)
+a.grid(row=0,column=0)
+ent=tk.Entry(aken) 
+ent.grid(row=0,column=1)
+
+b=tk.Label(aken,text="x+",bg="#0000CD",fg="#FFFFFF",font="Algerian 24",height=3,width=4)
+b.grid(row=1,column=0)
+entr=tk.Entry(aken)
+entr.grid(row=1,column=1)
+
+c=tk.Label(aken,text="=0",bg="#0000CD",fg="#FFFFFF",font="Algerian 24",height=3,width=4)
+c.grid(row=2,column=0)
+enty=Entry(aken)
+enty.grid(row=2,column=1)
+
+btn=tk.Button(aken,text="Решить",font="Arial 18",bg="#00FFFF",relief=RAISED) #Sunken Raised Groove111
+btn.grid(row=3,columnspan=2)
+btn.bind("<Button-1>",FromEntryToLabel) #LKM #-2Koleso #-3PKM
+
+
+
+
+
+f.grid(row=0,column=0) #pack(),place()111
+
+
+objects=[l,v]
+for i in range(len(objects)):
+    objects[i].pack()
+#l.pack()
+aken.mainloop()
+
+
+from tkinter import *
+
+def FromEntryToLabel(event):
+    t=ent.get()
+    l.configure(text=t)
+def valik():
+    t=var.get()
+    ent.delete(0,END)
+    ent.insert(END,t)
+    count=0
+
+showflag=False
+def showtarnid(event):
+    global showflag
+    if showflag:
+        ent.configure(show="")
+        showflag=False
+    else:
+        ent.configure(show="*")
+        showflag=True
+    
+
+
+aken=Tk()
+aken.geometry("600x500")
+aken.title("Pealkiri")
+aken.iconbitmap("bmp.ico")
+
+f=Frame(aken,bg="#FF0000",border=10,height=500,width=600)
+
+l=Label(f,text="Elemendid",bg="#0000CD",fg="#FFFFFF",font="Algerian 24",height=3,width=17)
+
+ent=Entry(f,fg="gold",bg="#F8F8FF",width=17,font="Arial 24",justify=CENTER) #show="*"
+
+btn=Button(f,text="Vajuta siia",font="Arial 18",bg="#00FFFF",relief=RAISED) #Sunken Raised Groove
+
+
+var=IntVar() #StringVar()
+r1=Radiobutton(f,text="Esimene",font="Arial 14", variable=var,value=1,command=valik)
+r2=Radiobutton(f,text="Teine",font="Arial 14", variable=var,value=2,command=valik)
+r3=Radiobutton(f,text="Kolmas",font="Arial 14", variable=var,value=3,command=valik)
+
+
+btn.bind("<Button-1>",FromEntryToLabel) #LKM #-2Koleso #-3PKM
+ent.bind("<Return>",showtarnid) #Enter
+
+
+
+
+f.grid(row=0,column=0) #pack(),place()
+
+
+objects=[l,ent,btn,r1,r2,r3]
+for i in range(len(objects)):
+    objects[i].pack()
+#l.pack()
+aken.mainloop()
